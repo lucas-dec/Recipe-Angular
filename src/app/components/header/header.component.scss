@@ -1,0 +1,28 @@
+@import "../../../Theme/mainStyle.scss";
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 13vw;
+  height: 100vh;
+  background-color: #fff;
+  padding: 2em 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  border-right: 6px solid $primary;
+
+  img.logo {
+    width: 80px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin-top: 80px;
+  }
+}

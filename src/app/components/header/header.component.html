@@ -1,0 +1,31 @@
+<header>
+  <a routerLink="/"
+    ><img
+      src="../../../assets/logo/logo.png"
+      alt="Logo Recipe App"
+      class="logo"
+  /></a>
+  <nav>
+    <app-button-nav
+      [linkURL]="'recommended'"
+      [imageURL]="'url(../../assets/icons/recommended.png)'"
+    ></app-button-nav>
+
+    <app-button-nav
+      [linkURL]="'maincourse'"
+      [linkName]="'main course'"
+      [imageURL]="'url(../../assets/icons/dinner.png)'"
+    ></app-button-nav>
+
+    <app-button-nav
+      [linkURL]="'coctails'"
+      [linkName]="'drink / coctails'"
+      [imageURL]="'url(../../assets/icons/blender.png)'"
+    ></app-button-nav>
+
+    <app-button-nav
+      [linkURL]="'salad'"
+      [imageURL]="'url(../../assets/icons/salad.png)'"
+    ></app-button-nav>
+  </nav>
+</header>
