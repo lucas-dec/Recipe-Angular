@@ -6,7 +6,7 @@ button {
   height: 100px;
   font-size: 0.8rem;
   text-transform: uppercase;
-  border-bottom: 1px solid $ligthGrey;
+  border-bottom: 1px solid $lightGrey;
   transition: all 0.25s;
 
   background-position: 50% 30%;
@@ -25,7 +25,7 @@ button {
   }
   &:hover {
     cursor: pointer;
-    background-color: $ligthGrey;
+    background-color: $lightGrey;
   }
   &:focus {
     outline: none;

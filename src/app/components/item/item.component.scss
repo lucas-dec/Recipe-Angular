@@ -1,0 +1,27 @@
+@import "../../../Theme/mainStyle.scss";
+
+.wrapperItem {
+  width: 100%;
+  height: 350px;
+  padding: 1em;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  transition: 0.25s ease;
+
+  &:hover {
+    transform: scale(0.95);
+  }
+
+  .itemContent {
+    width: 90%;
+    background-color: rgba(225, 226, 225, 0.5);
+    padding: 0.5em 2em;
+  }
+
+  h1 {
+    font-size: $mediumFont;
+  }
+}

@@ -13,7 +13,9 @@ import { SearchComponent } from './views/search/search.component';
 import { ButtonNavComponent } from '../app/components/button-nav/button-nav.component';
 import { SectionHeaderComponent } from './components/section-header/section-header.component';
 import { SearchHeaderComponent } from './components/search-header/search-header.component';
-import { SearchFormComponent } from './components/search-form/search-form.component'
+import { SearchFormComponent } from './components/search-form/search-form.component';
+import { ItemsListComponent } from './components/items-list/items-list.component';
+import { ItemComponent } from './components/item/item.component'
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { SearchFormComponent } from './components/search-form/search-form.compon
     ButtonNavComponent,
     SectionHeaderComponent,
     SearchHeaderComponent,
-    SearchFormComponent
+    SearchFormComponent,
+    ItemsListComponent,
+    ItemComponent
   ],
   imports: [
     BrowserModule,
