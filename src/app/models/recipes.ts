@@ -1,4 +1,8 @@
-export interface Recipe {
+export interface Recipes {
+    recipes: RecipeElement[];
+}
+
+export interface RecipeElement {
     vegetarian: boolean;
     vegan: boolean;
     glutenFree: boolean;
@@ -29,12 +33,38 @@ export interface Recipe {
     cuisines: any[];
     dishTypes: string[];
     diets: string[];
-    occasions: string[];
-    winePairing: WinePairing;
+    occasions: any[];
+    winePairing?: WinePairing;
     instructions: string;
-    analyzedInstructions: any[];
+    analyzedInstructions: AnalyzedInstruction[];
     originalId: null;
     spoonacularSourceUrl: string;
+}
+
+export interface AnalyzedInstruction {
+    name: string;
+    steps: Step[];
+}
+
+export interface Step {
+    number: number;
+    step: string;
+    ingredients: Ent[];
+    equipment: Ent[];
+    length?: Length;
+}
+
+export interface Ent {
+    id: number;
+    name: string;
+    localizedName: string;
+    image: string;
+    temperature?: Length;
+}
+
+export interface Length {
+    number: number;
+    unit: string;
 }
 
 export interface ExtendedIngredient {
@@ -65,9 +95,9 @@ export interface Metric {
 }
 
 export interface WinePairing {
-    pairedWines: string[];
-    pairingText: string;
-    productMatches: ProductMatch[];
+    pairedWines?: string[];
+    pairingText?: string;
+    productMatches?: ProductMatch[];
 }
 
 export interface ProductMatch {

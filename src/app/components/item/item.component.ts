@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Recipe } from '../../models/recipe'
 
 @Component({
   selector: 'app-item',
@@ -10,12 +11,12 @@ export class ItemComponent implements OnInit {
 
   imageURL: string;
   @Input()
-  item: any
+  item: Recipe
 
   constructor() { }
 
   ngOnInit(): void {
-    this.imageURL = `url(https://spoonacular.com/recipeImages/${this.item.id}-556x370.jpg)`
+    this.imageURL = `url(https://spoonacular.com/recipeImages/${this.item.id}-556x370.jpg)`;
   }
 
 }
