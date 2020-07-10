@@ -1,0 +1,54 @@
+@import "../../../Theme/mainStyle.scss";
+
+form {
+  position: relative;
+  width: 300px;
+
+  input {
+    width: 100%;
+    border: none;
+    border-bottom: solid 4px $darkGrey;
+    transition: 240ms ease;
+    font-size: $smallFont;
+    line-height: 1rem;
+    padding-bottom: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 11px;
+    color: $ligthGrey;
+    background-color: $lightPrimary;
+    text-align: center;
+
+    &:focus {
+      outline: none;
+      border-bottom: solid 4px #ee4540;
+    }
+
+    &::placeholder {
+      color: white;
+    }
+  }
+
+  button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 30px;
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    background-image: url(../../../assets/icons/magnifire.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 15px;
+    border-radius: 10px 0 0 10px;
+    cursor: pointer;
+    transition: 0.2s ease;
+
+    &:hover {
+      background-color: $darkGrey;
+      width: 40px;
+    }
+  }
+}
