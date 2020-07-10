@@ -7,13 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SearchHeaderComponent implements OnInit {
 
-  defaultBackground: string = 'url(../../../assets/background/bg-header.jpg)';
-
   @Input()
   title: string;
-
-  @Input()
-  bgURL: string;
 
   constructor() { }
 
