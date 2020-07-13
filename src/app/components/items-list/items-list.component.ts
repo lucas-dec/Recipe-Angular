@@ -16,6 +16,6 @@ export class ItemsListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.itemsArray = this.items[0].recipes;
+    this.itemsArray = this.items;
   }
 }

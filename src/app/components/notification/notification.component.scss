@@ -1,0 +1,44 @@
+@import "../../../Theme/mainStyle.scss";
+
+.wrapperNotification {
+  position: fixed;
+  left: 50%;
+  top: 65%;
+  border: 5px solid;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.7);
+  transform: translate(calc(-50% + 6vw), -50%);
+  width: 30%;
+  height: 30vh;
+  padding: 2em;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+
+  @keyframes Pulse {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+    animation: Pulse 2s ease-in-out 0s infinite;
+  }
+  .info p {
+    color: $primary;
+    font-size: $mediumFont;
+    text-align: center;
+    margin-top: 0.5em;
+  }
+}

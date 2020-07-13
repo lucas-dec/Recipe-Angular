@@ -1,0 +1,23 @@
+<div *ngIf="error; then errorInfo; else loadingInfo"></div>
+
+<ng-template #errorInfo>
+  <div class="wrapperNotification" [style.border-color]="$primary">
+    <img src="{{ errorIcon }}" />
+    <div class="info">
+      <p>
+        {{ error }}
+      </p>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #loadingInfo>
+  <div class="wrapperNotification">
+    <img src="{{ infoIcon }}" />
+    <div class="info">
+      <p>
+        We are looking for recipes specially for You ! please, wait a second ...
+      </p>
+    </div>
+  </div>
+</ng-template>

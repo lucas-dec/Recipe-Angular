@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from '../app/components/header/header.component';
@@ -15,7 +16,9 @@ import { SectionHeaderComponent } from './components/section-header/section-head
 import { SearchHeaderComponent } from './components/search-header/search-header.component';
 import { SearchFormComponent } from './components/search-form/search-form.component';
 import { ItemsListComponent } from './components/items-list/items-list.component';
-import { ItemComponent } from './components/item/item.component'
+import { ItemComponent } from './components/item/item.component';
+import { NotificationComponent } from './components/notification/notification.component';
+
 
 @NgModule({
   declarations: [
@@ -31,11 +34,14 @@ import { ItemComponent } from './components/item/item.component'
     SearchHeaderComponent,
     SearchFormComponent,
     ItemsListComponent,
-    ItemComponent
+    ItemComponent,
+    NotificationComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
