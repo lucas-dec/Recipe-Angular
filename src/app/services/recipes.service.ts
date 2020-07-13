@@ -13,13 +13,17 @@ export class RecipesService {
 
   constructor(private http: HttpClient) { }
 
+  handleError(err: HttpErrorResponse) {
+    return throwError(err.error.message || "Server Error")
+  }
 
   getRecommendedRecipes(): Observable<Recipes[]> {
     const apiUrl: string = `https://api.spoonacular.com/recipes/random?number=3&apiKey=${this.apiKey}`;
     return this.http.get<Recipes[]>(apiUrl).pipe(catchError(this.handleError))
   }
 
-  handleError(err: HttpErrorResponse) {
-    return throwError(err.error.message || "Server Error")
+  getRecipes(category): Observable<Recipes[]> {
+    const apiUrl: string = `https://api.spoonacular.com/recipes/random?number=6&tags=${category}&apiKey=${this.apiKey}`;
+    return this.http.get<Recipes[]>(apiUrl).pipe(catchError(this.handleError))
   }
 }

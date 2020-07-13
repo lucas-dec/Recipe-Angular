@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RecipesService } from '../../services/recipes.service'
+import { Recipes } from '../../models/recipes'
 
 @Component({
   selector: 'app-maincourse',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MaincourseComponent implements OnInit {
 
-  constructor() { }
+  recipes: Array<Recipes>;
+  errorMessage: string
+
+  constructor(private recipesService: RecipesService) { }
 
   ngOnInit(): void {
+    this.recipesService.getRecipes('main course').subscribe(items => {
+      this.recipes = items
+    }, error => {
+      this.errorMessage = error
+    })
+
   }
 
 }
