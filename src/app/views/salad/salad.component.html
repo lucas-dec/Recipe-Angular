@@ -2,4 +2,14 @@
   [title]="'Salad'"
   [bgName]="'bg-salad'"
 ></app-section-header>
-<p>salad works!</p>
+<div *ngIf="!recipes && !errorMessage">
+  <app-notification></app-notification>
+</div>
+
+<div *ngIf="recipes">
+  <app-items-list [items]="recipes"></app-items-list>
+</div>
+
+<div *ngIf="errorMessage">
+  <app-notification [error]="errorMessage"></app-notification>
+</div>
