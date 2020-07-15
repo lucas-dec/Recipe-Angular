@@ -30,7 +30,7 @@ export interface Recipe {
     dishTypes: string[];
     diets: string[];
     occasions: string[];
-    winePairing: WinePairing;
+    winePairing?: WinePairing;
     instructions: string;
     analyzedInstructions: any[];
     originalId: null;
@@ -65,9 +65,9 @@ export interface Metric {
 }
 
 export interface WinePairing {
-    pairedWines: string[];
-    pairingText: string;
-    productMatches: ProductMatch[];
+    pairedWines?: string[];
+    pairingText?: string;
+    productMatches?: ProductMatch[];
 }
 
 export interface ProductMatch {

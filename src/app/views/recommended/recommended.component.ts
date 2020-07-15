@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Recipes } from '../../models/recipes'
 import { RecipesService } from '../../services/recipes.service'
-
+import { Recipe } from '../../models/recipe'
 @Component({
   selector: 'app-recommended',
   templateUrl: './recommended.component.html',
@@ -9,14 +8,14 @@ import { RecipesService } from '../../services/recipes.service'
 })
 export class RecommendedComponent implements OnInit {
 
-  recipes: Array<Recipes>;
+  recipes: Recipe[];
   errorMessage: string;
 
   constructor(private recipeServices: RecipesService) { }
 
   ngOnInit(): void {
     this.recipeServices.getRecommendedRecipes().subscribe(items => {
-      this.recipes = items
+      this.recipes = items.recipes
     }, error => {
       this.errorMessage = error
     })

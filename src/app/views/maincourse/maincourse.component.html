@@ -2,7 +2,7 @@
   [title]="'Main course'"
   [bgName]="'bg-main-course'"
 ></app-section-header>
-<div *ngIf="!recipes && !errorMessage">
+<div *ngIf="loadingData">
   <app-notification></app-notification>
 </div>
 
@@ -13,3 +13,8 @@
 <div *ngIf="errorMessage">
   <app-notification [error]="errorMessage"></app-notification>
 </div>
+
+<app-load-new-recipes
+  *ngIf="recipes"
+  (eventLoadNewRecipes)="loadNewRecipes($event)"
+></app-load-new-recipes>

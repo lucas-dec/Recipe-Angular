@@ -18,6 +18,7 @@ import { SearchFormComponent } from './components/search-form/search-form.compon
 import { ItemsListComponent } from './components/items-list/items-list.component';
 import { ItemComponent } from './components/item/item.component';
 import { NotificationComponent } from './components/notification/notification.component';
+import { LoadNewRecipesComponent } from './components/load-new-recipes/load-new-recipes.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { NotificationComponent } from './components/notification/notification.co
     ItemsListComponent,
     ItemComponent,
     NotificationComponent,
+    LoadNewRecipesComponent,
 
   ],
   imports: [

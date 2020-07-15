@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, OnChanges, Input, SimpleChange } from '@angular/core';
 import { Recipes } from '../../models/recipes'
 
 @Component({
@@ -17,5 +17,9 @@ export class ItemsListComponent implements OnInit {
 
   ngOnInit(): void {
     this.itemsArray = this.items;
+  }
+
+  ngOnChanges(changes: SimpleChange): void {
+    this.itemsArray = this.items
   }
 }
