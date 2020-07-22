@@ -3,6 +3,7 @@ import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators'
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Recipes } from '../models/recipes';
+import { Recipe } from '../models/recipe'
 
 
 @Injectable({
@@ -25,5 +26,10 @@ export class RecipesService {
   getRecipes(category): Observable<Recipes> {
     const apiUrl: string = `https://api.spoonacular.com/recipes/random?number=6&tags=${category}&apiKey=${this.apiKey}`;
     return this.http.get<Recipes>(apiUrl).pipe(catchError(this.handleError))
+  }
+
+  getDetailsRecipe(id): Observable<Recipe> {
+    const url = `https://api.spoonacular.com/recipes/${id}/information?apiKey=${this.apiKey}`;
+    return this.http.get<Recipe>(url).pipe(catchError(this.handleError))
   }
 }

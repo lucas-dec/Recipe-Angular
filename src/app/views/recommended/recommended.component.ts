@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RecipesService } from '../../services/recipes.service'
 import { Recipe } from '../../models/recipe'
+
 @Component({
   selector: 'app-recommended',
   templateUrl: './recommended.component.html',

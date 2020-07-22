@@ -19,6 +19,7 @@ import { ItemsListComponent } from './components/items-list/items-list.component
 import { ItemComponent } from './components/item/item.component';
 import { NotificationComponent } from './components/notification/notification.component';
 import { LoadNewRecipesComponent } from './components/load-new-recipes/load-new-recipes.component';
+import { DetailsRecipeComponent } from './views/details-recipe/details-recipe.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { LoadNewRecipesComponent } from './components/load-new-recipes/load-new-
     ItemComponent,
     NotificationComponent,
     LoadNewRecipesComponent,
+    DetailsRecipeComponent,
 
   ],
   imports: [
