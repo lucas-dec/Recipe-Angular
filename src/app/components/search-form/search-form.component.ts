@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-search-form',
@@ -9,7 +10,7 @@ export class SearchFormComponent implements OnInit {
 
   value = ""
 
-  constructor() { }
+  constructor(private router: Router) { }
 
 
   ngOnInit(): void {
@@ -18,7 +19,7 @@ export class SearchFormComponent implements OnInit {
   onSubmit(event) {
     event.preventDefault();
     event.target.reset()
-    console.log(this.value);
+    this.router.navigate([`/search/${this.value}`])
   }
 
   onType(event) {

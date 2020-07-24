@@ -18,7 +18,8 @@ const routes: Routes = [
 	{ path: "coctails", component: CoctailsComponent },
 	{ path: "salad/:id", component: DetailsRecipeComponent },
 	{ path: "salad", component: SaladComponent },
-	{ path: "search", component: SearchComponent },
+	{ path: "search/:search/:id", component: DetailsRecipeComponent },
+	{ path: "search/:search", component: SearchComponent },
 	{ path: "", redirectTo: "/recommended", pathMatch: "full" }
 ];
 

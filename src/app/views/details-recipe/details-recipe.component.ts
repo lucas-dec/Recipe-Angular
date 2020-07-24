@@ -17,14 +17,15 @@ export class DetailsRecipeComponent implements OnInit {
   constructor(private route: ActivatedRoute, private recipeServices: RecipesService) { }
 
   ngOnInit(): void {
+    let id
     this.route.paramMap.subscribe(params => {
-      let id = params.get('id')
-      this.recipeServices.getDetailsRecipe(id).subscribe(items => {
-        this.recipe = items;
-        this.imgRecipe = `url(${items.image})`
-      }, error => {
-        this.errorMessage = error
-      })
+      id = params.get('id')
+    })
+    this.recipeServices.getDetailsRecipe(id).subscribe(items => {
+      this.recipe = items;
+      this.imgRecipe = `url(${items.image})`
+    }, error => {
+      this.errorMessage = error
     })
   }
 }
