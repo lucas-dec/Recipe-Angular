@@ -1,28 +1,58 @@
-# RecipeApp
+# Recipe app - Angular + API
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
+###### This is the same project like - [Recipe app - ReactJS + Redux + API](https://github.com/lucas-dec/Recipe-ReactJS) but created in Angular !
 
-## Development server
+###### The purpose of creating the application was to learn Angular and TypeScript.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+'Recipe app' is presenting recipes of food and drinks. There are 4 main categories: Main Course, Salad, Drinks and Recommended recipes. In addition, the user can manually search for recipes (e.g. chicken, pasta, rice etc.). Recipes are fetching with 'Spoonacular Food & Recipe API'.
 
-## Code scaffolding
+## Screenshots
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![Recommended](screenshots/recommended.jpg?raw=true "Recommended")
+![DetailsRecipes](screenshots/details-recipe.jpg?raw=true "DetailsRecipes")
+![Notification](screenshots/fetching-data.jpg?raw=true "Notification")
 
-## Build
+## Live Preview
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+###### The app is hosted on Netlify:
 
-## Running unit tests
+https://recipe-angular.netlify.app
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Quick Start
 
-## Running end-to-end tests
+- clone the repo:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
+git clone https://github.com/lucas-dec/Recipe-ReactJS.git
+```
 
-## Further help
+- install the necessary dependecies
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-# Recipe-Angular
+```
+npm install
+```
+
+- start the server:
+
+```
+ng serve
+```
+
+- Open http://localhost:4200 to run the app in your browser on your local machine.
+
+## Features
+
+- Recipes proposition
+- Recipes category
+- Ingredients needed to prepare a dish
+- Preparation instructions
+- Details information about recipes
+- Search recipes
+- Notifications about errors and fetching data
+
+# Technologies used on this project:
+
+- Angular generated with Angular CLI
+- Servies
+- Routing
+- Fetch data from API using HttpClient - (https://spoonacular.com/food-api)
