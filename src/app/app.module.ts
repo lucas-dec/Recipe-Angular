@@ -20,6 +20,8 @@ import { ItemComponent } from './components/item/item.component';
 import { NotificationComponent } from './components/notification/notification.component';
 import { LoadNewRecipesComponent } from './components/load-new-recipes/load-new-recipes.component';
 import { DetailsRecipeComponent } from './views/details-recipe/details-recipe.component';
+import { InfoItemComponent } from './components/info-item/info-item.component';
+import { IngredientsListComponent } from './components/ingredients-list/ingredients-list.component';
 
 
 @NgModule({
@@ -40,6 +42,8 @@ import { DetailsRecipeComponent } from './views/details-recipe/details-recipe.co
     NotificationComponent,
     LoadNewRecipesComponent,
     DetailsRecipeComponent,
+    InfoItemComponent,
+    IngredientsListComponent,
 
   ],
   imports: [

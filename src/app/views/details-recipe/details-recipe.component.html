@@ -1,1 +1,53 @@
-<p>details-recipe works!</p>
+<div *ngIf="!recipe && !errorMessage">
+  <app-notification></app-notification>
+</div>
+
+<div *ngIf="recipe">
+  <div class="wrapper">
+    <div class="header">
+      <h1 class="name">{{ recipe.title }}</h1>
+      <div class="info-wrapper">
+        <app-info-item [iconName]="'likes'"
+          >{{ recipe.aggregateLikes }} likes</app-info-item
+        >
+        <app-info-item [iconName]="'time'"
+          >{{ recipe.readyInMinutes }} min</app-info-item
+        >
+        <app-info-item [iconName]="'quality'"
+          >{{ recipe.spoonacularScore }}%</app-info-item
+        >
+      </div>
+    </div>
+    <div
+      class="image"
+      [style.background-image]="
+        imgRecipe
+          ? imgRecipe
+          : 'url(../../../assets/background/default-image.jpg)'
+      "
+    ></div>
+    <div class="about-wrapper">
+      <h1 class="label">About:</h1>
+      <p class="paragraph" [innerHTML]="recipe.summary"></p>
+    </div>
+    <div class="instruction-wrapper">
+      <h1 class="label">Instruction:</h1>
+      <ol class="instruction-list">
+        <li
+          *ngFor="let instr of recipe.analyzedInstructions[0].steps"
+          class="instruction-item"
+        >
+          <span *ngIf="instr; else empty">{{ instr.step }}</span>
+          <ng-template #empty><h3>empty list of instructions</h3></ng-template>
+        </li>
+      </ol>
+    </div>
+
+    <app-ingredients-list [extendedIngredients]="recipe.extendedIngredients">
+    </app-ingredients-list>
+  </div>
+</div>
+
+<div *ngIf="errorMessage">
+  <app-notification [error]="errorMessage"></app-notification>
+</div>

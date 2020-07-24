@@ -1,0 +1,14 @@
+<ul class="ingredients-list">
+  <h1 class="label">Ingredients</h1>
+  <li class="ingredients-item" *ngFor="let ingr of extendedIngredients">
+    <img
+      src="https://spoonacular.com/cdn/ingredients_100x100/{{ ingr.image }}"
+      alt="{{ ingr.name }}"
+    />
+    <p class="content-ingredient">
+      {{ measure(ingr) }}
+      {{ ingr.measures.metric.unitShort }}
+      {{ ingr.name }}
+    </p>
+  </li>
+</ul>

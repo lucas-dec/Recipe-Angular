@@ -12,6 +12,7 @@ export class DetailsRecipeComponent implements OnInit {
 
   recipe: Recipe
   errorMessage: string;
+  imgRecipe: string;
 
   constructor(private route: ActivatedRoute, private recipeServices: RecipesService) { }
 
@@ -19,7 +20,8 @@ export class DetailsRecipeComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
       let id = params.get('id')
       this.recipeServices.getDetailsRecipe(id).subscribe(items => {
-        this.recipe = items
+        this.recipe = items;
+        this.imgRecipe = `url(${items.image})`
       }, error => {
         this.errorMessage = error
       })

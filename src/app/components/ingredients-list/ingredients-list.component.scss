@@ -1,0 +1,30 @@
+@import "../../../Theme/mainStyle.scss";
+
+ul.ingredients-list {
+  position: absolute;
+  max-width: 15vw;
+  padding: 1em;
+  right: 0;
+  top: 2em;
+  border-top: 4px solid;
+  border-left: 4px solid;
+  border-image: linear-gradient(to bottom, $lightPrimary, transparent);
+  list-style: none;
+  border-image-slice: 1;
+
+  li.ingredients-item {
+    display: flex;
+    width: 100%;
+    padding: 1em 0;
+    align-items: center;
+    font-size: $smallFont;
+    img {
+      width: 50px;
+      max-height: 50px;
+    }
+    p.content-ingredient {
+      width: 100%;
+      padding-left: 0.5em;
+    }
+  }
+}
