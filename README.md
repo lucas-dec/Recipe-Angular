@@ -23,7 +23,7 @@ https://recipe-angular.netlify.app
 - clone the repo:
 
 ```
-git clone https://github.com/lucas-dec/Recipe-ReactJS.git
+git clone https://github.com/lucas-dec/Recipe-Angular.git
 ```
 
 - install the necessary dependecies
